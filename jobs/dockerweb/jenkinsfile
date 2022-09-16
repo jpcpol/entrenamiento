@@ -10,6 +10,7 @@ pipeline {
     environment {
         name_final = "${name_container}${tag_imagen}${puerto_imagen}"        
     }
+    
     stages {
           stage('stop/rm') {
 
