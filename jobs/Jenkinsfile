@@ -3,14 +3,14 @@ import groovy.json.JsonSlurperClassic
 def jsonParse(def json) {
     new groovy.json.JsonSlurperClassic().parseText(json)
 }
+
 pipeline {
   agent any
   environment {
     appName = "variable" 
   }
   stages {
-
- stage("paso 1"){
+    stage("paso 1"){
      
       steps {
           script {			
@@ -19,7 +19,8 @@ pipeline {
       }
     }
   }
-  post {
+
+    post {
       always {          
           deleteDir()
            sh "echo 'fase always'"
@@ -33,5 +34,5 @@ pipeline {
       }
       
   }
-}  
+} 
 
