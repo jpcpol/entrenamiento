@@ -5,21 +5,20 @@ pipeline {
     stage("paso 1"){
      
       steps {		
-           echo 'hola mundo'
+        echo 'hola mundo'
       }
     }
   }
     post {
       always {          
-          
-           echo 'fase always'
+        echo 'fase always'
       }
       success {
-            echo 'fase success'
+        echo 'fase success'
         }
 
       failure {
-            echo 'fase failure'
+        echo 'fase failure'
       }
       
   }
